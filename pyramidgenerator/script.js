@@ -14,10 +14,8 @@ function padRow(rowNumber, rowCount) {
   rows.push(padRow(i, count));
 }*/
 
-let done = 0;
-
-while (done < count) {
-  done++;
+while (rows.length < count) {
+  rows.length++;
   rows.push(padRow(rows.length + 1, count));
 }
 
