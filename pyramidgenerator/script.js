@@ -11,7 +11,11 @@ function padRow(rowNumber, rowCount) {
 }
 
 for (let i = 1; i <= count; i++) {
-  rows.push(padRow(i, count));
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  } else {
+    rows.push(padRow(i, count));
+  }
 }
 
 /*while (rows.length < count) {
