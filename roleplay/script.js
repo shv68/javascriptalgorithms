@@ -20,6 +20,8 @@ const monsterName = document.querySelector("#monsterName");
 
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+//initialize buttons
+
 function goStore() {
   console.log("Going to store.");
 }
