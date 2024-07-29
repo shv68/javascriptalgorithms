@@ -277,3 +277,7 @@ function restart() {
   healthText.innerText = health;
   goTown();
 }
+
+function easterEgg() {
+  update(locations[7]);
+}
