@@ -21,7 +21,9 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
 const locations = [];
-const cat = {};
+const cat = {
+  name: "Whiskers",
+};
 console.log(cat);
 //initialize buttons
 
