@@ -50,6 +50,7 @@ function calculateCalories(e) {
     "#exercise input[type=number]"
   );
   const breakfastCalories = getCaloriesFromInputs(breakfastNumberInputs);
+  const lunchCalories = getCaloriesFromInputs(lunchNumberInputs);
 }
 
 function getCaloriesFromInputs(list) {
