@@ -22,5 +22,7 @@ function addEntry() {
   );
   const entryNumber =
     targetInputContainer.querySelectorAll('input[type="text"]').length;
-  const HTMLString = ``;
+  const HTMLString = `
+  <label>Entry ${entryNumber} Name</label>
+  `;
 }
