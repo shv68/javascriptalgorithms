@@ -107,4 +107,6 @@ const renderSongs = (array) => {
   playlistSongs.innerHTML = songsHTML;
 };
 
+let sortSongs = () => {};
+
 renderSongs(userData?.songs);
