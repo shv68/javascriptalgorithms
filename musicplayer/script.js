@@ -167,6 +167,7 @@ const deleteSong = (id) => {
 
       renderSongs(sortSongs());
       setPlayButtonAccessibleText();
+      resetButton.remove();
     });
   }
 };
