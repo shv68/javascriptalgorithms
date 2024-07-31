@@ -166,6 +166,7 @@ const deleteSong = (id) => {
       userData.songs = [...allSongs];
 
       renderSongs(sortSongs());
+      setPlayButtonAccessibleText();
     });
   }
 };
