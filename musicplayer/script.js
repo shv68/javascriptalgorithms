@@ -98,8 +98,6 @@ const printMessage = (org) => {
 
 printMessage("freeCodeCamp");
 
-let addTwoNumbers = (num1, num2) => {
-  return num1 + num2;
-};
+let addTwoNumbers = (num1, num2) => num1 + num2;
 
 console.log(addTwoNumbers(3, 4));
