@@ -199,8 +199,5 @@ playersDropdownList.addEventListener("change", (e) => {
     case "nickname":
       setPlayerCards(players.filter((player) => player.nickname !== null));
       break;
-
-    default:
-      break;
   }
 });
