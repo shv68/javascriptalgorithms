@@ -54,4 +54,5 @@ taskForm.addEventListener("submit", (e) => {
         </div>
       `;
   });
+  taskForm.classList.toggle("hidden");
 });
