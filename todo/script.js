@@ -25,6 +25,7 @@ const addOrUpdateTask = () => {
   if (dataArrIndex === -1) {
     taskData.unshift(taskObj);
   }
+  updateTaskContainer();
 };
 
 const updateTaskContainer = () => {
