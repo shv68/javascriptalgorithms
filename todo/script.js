@@ -106,3 +106,5 @@ taskForm.addEventListener("submit", (e) => {
 
   addOrUpdateTask();
 });
+
+localStorage.setItem("data", myTaskArr);
