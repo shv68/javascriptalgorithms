@@ -6,6 +6,7 @@ const decimalToBinary = (input) => {
   const inputs = [];
   const quotients = [];
   const remainders = [];
+  input = 0;
 };
 
 const checkUserInput = () => {
