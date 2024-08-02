@@ -27,6 +27,7 @@ const addOrUpdateTask = () => {
   } else {
     taskData[dataArrIndex] = taskObj;
   }
+
   updateTaskContainer();
   reset();
 };
@@ -51,6 +52,7 @@ const deleteTask = (buttonEl) => {
   const dataArrIndex = taskData.findIndex(
     (item) => item.id === buttonEl.parentElement.id
   );
+
   buttonEl.parentElement.remove();
   taskData.splice(dataArrIndex, 1);
 };
@@ -59,12 +61,15 @@ const editTask = (buttonEl) => {
   const dataArrIndex = taskData.findIndex(
     (item) => item.id === buttonEl.parentElement.id
   );
+
   currentTask = taskData[dataArrIndex];
+
   titleInput.value = currentTask.title;
   dateInput.value = currentTask.date;
   descriptionInput.value = currentTask.description;
 
   addOrUpdateTaskBtn.innerText = "Update Task";
+
   taskForm.classList.toggle("hidden");
 };
 
@@ -87,6 +92,7 @@ closeTaskFormBtn.addEventListener("click", () => {
     titleInput.value !== currentTask.title ||
     dateInput.value !== currentTask.date ||
     descriptionInput.value !== currentTask.description;
+
   if (formInputsContainValues && formInputValuesUpdated) {
     confirmCloseDialog.showModal();
   } else {
@@ -108,6 +114,7 @@ taskForm.addEventListener("submit", (e) => {
 });
 
 localStorage.setItem("data", JSON.stringify(myTaskArr));
+
 localStorage.clear();
 
 const getTaskArr = localStorage.getItem("data");
