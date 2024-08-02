@@ -107,4 +107,4 @@ taskForm.addEventListener("submit", (e) => {
   addOrUpdateTask();
 });
 
-localStorage.setItem("data", myTaskArr);
+localStorage.setItem("data", JSON.stringify(myTaskArr));
