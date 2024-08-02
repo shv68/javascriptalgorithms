@@ -8,6 +8,7 @@ const b = () => {
 const c = () => {
   return "awesome!";
 };
+console.log(a());
 
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
