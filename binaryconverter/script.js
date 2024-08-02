@@ -2,13 +2,12 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 const animationContainer = document.getElementById("animation-container");
-
 const animationData = [
   {
     inputVal: 5,
     marginTop: 300,
     addElDelay: 1000,
-    msg: "decimalToBinary(5) returns '10' + 1 (5 % 2). Then it pops off the stack.",
+    msg: 'decimalToBinary(5) returns "10" + 1 (5 % 2). Then it pops off the stack.',
     showMsgDelay: 15000,
     removeElDelay: 20000,
   },
@@ -40,14 +39,17 @@ const decimalToBinary = (input) => {
 
 const showAnimation = () => {
   result.innerText = "Call Stack Animation";
+
   animationData.forEach((obj) => {
     setTimeout(() => {
       animationContainer.innerHTML += `
-      <p class="animation-frame" id="${obj.inputVal}" style="margin-top: ${obj.marginTop}px;">
-      decimalToBinary(${obj.inputVal})
-      </p>
+        <p id="${obj.inputVal}" style="margin-top: ${obj.marginTop}px;" class="animation-frame">
+          decimalToBinary(${obj.inputVal})
+        </p>
       `;
     }, obj.addElDelay);
+
+    setTimeout(() => {}, obj.showMsgDelay);
   });
 };
 
