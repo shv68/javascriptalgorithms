@@ -13,6 +13,9 @@ const getMedian = (array) => {
 const getMode = (array) => {
   const counts = {};
   array.forEach((el) => (counts[el] = (counts[el] || 0) + 1));
+  if (new Set(Object.values(counts)).size === 1) {
+    return null;
+  }
   console.log(counts);
 };
 
