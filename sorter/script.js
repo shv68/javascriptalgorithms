@@ -29,7 +29,10 @@ const bubbleSort = (array) => {
       }
     }
   }
+
   return array;
 };
+
+const selectionSort = (array) => {};
 
 sortButton.addEventListener("click", sortInputArray);
