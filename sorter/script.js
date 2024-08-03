@@ -1,2 +1,4 @@
 const sortButton = document.getElementById("sort");
-const sortInputArray = (evet) => {};
+const sortInputArray = (event) => {
+  event.preventDefault();
+};
