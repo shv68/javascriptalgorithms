@@ -196,6 +196,8 @@ const animate = () => {
       player.velocity.y = gravity;
     }
   });
+
+  checkpoints.forEach((checkpoint, index, checkpoints) => {});
 };
 
 const keys = {
