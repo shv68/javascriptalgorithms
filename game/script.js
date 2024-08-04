@@ -61,6 +61,7 @@ class Platform {
       x,
       y,
     };
+    this.width = 200;
   }
 }
 const player = new Player();
