@@ -55,6 +55,7 @@ class Player {
     }
   }
 }
+
 class Platform {
   constructor(x, y) {
     this.position = {
@@ -62,8 +63,10 @@ class Platform {
       y,
     };
     this.width = 200;
+    this.height = proportionalSize(40);
   }
 }
+
 const player = new Player();
 
 const animate = () => {
