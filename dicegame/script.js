@@ -131,6 +131,35 @@ const resetGame = () => {
   resetRadioOptions();
 };
 
+const checkForStraights = (arr) => {
+  const uniqueDice = [...new Set(arr)].sort((a, b) => a - b);
+
+  // Check for Large Straight (5 consecutive numbers)
+  const isLargeStraight =
+    uniqueDice.length === 5 && uniqueDice[4] - uniqueDice[0] === 4;
+
+  if (isLargeStraight) {
+    updateRadioOption(4, 40); // Enable the fifth radio button with a score of 40
+  }
+
+  // Check for Small Straight (4 consecutive numbers)
+  const isSmallStraight =
+    uniqueDice.length >= 4 &&
+    (uniqueDice
+      .slice(0, 4)
+      .every((_, i) => uniqueDice[i + 1] - uniqueDice[i] === 1) ||
+      uniqueDice
+        .slice(1, 5)
+        .every((_, i) => uniqueDice[i + 1] - uniqueDice[i] === 1));
+
+  if (isSmallStraight) {
+    updateRadioOption(3, 30); // Enable the fourth radio button with a score of 30
+  } else if (!isLargeStraight) {
+    // If no small straight or large straight, update the last radio button with 0
+    updateRadioOption(5, 0);
+  }
+};
+
 rollDiceBtn.addEventListener("click", () => {
   if (rolls === 3) {
     alert("You have made three rolls this round. Please select a score.");
@@ -141,6 +170,7 @@ rollDiceBtn.addEventListener("click", () => {
     updateStats();
     getHighestDuplicates(diceValuesArr);
     detectFullHouse(diceValuesArr);
+    checkForStraights(diceValuesArr);
   }
 });
 
