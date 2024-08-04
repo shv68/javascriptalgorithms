@@ -72,7 +72,7 @@ class Platform {
 }
 
 const player = new Player();
-
+const platformPositions = [];
 const animate = () => {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
