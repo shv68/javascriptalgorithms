@@ -95,6 +95,25 @@ const resetRadioOptions = () => {
   });
 };
 
+const resetGame = () => {
+  diceValuesArr = [0, 0, 0, 0, 0];
+  score = 0;
+  round = 1;
+  rolls = 0;
+
+  listOfAllDice.forEach((dice, index) => {
+    dice.textContent = diceValuesArr[index];
+  });
+
+  totalScore.textContent = score;
+  scoreHistory.innerHTML = "";
+
+  currentRoundRolls.textContent = rolls;
+  currentRound.textContent = round;
+
+  resetRadioOptions();
+};
+
 rollDiceBtn.addEventListener("click", () => {
   if (rolls === 3) {
     alert("You have made three rolls this round. Please select a score.");
@@ -140,6 +159,7 @@ keepScoreBtn.addEventListener("click", () => {
     if (round > 6) {
       setTimeout(() => {
         alert(`Game Over! Your total score is ${score}`);
+        resetGame();
       }, 500);
     }
   } else {
