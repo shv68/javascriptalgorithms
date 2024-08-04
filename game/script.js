@@ -211,7 +211,11 @@ const animate = () => {
 
     if (checkpointDetectionRules.every((rule) => rule)) {
       checkpoint.claim();
+
       if (index === checkpoints.length - 1) {
+        isCheckpointCollisionDetectionActive = false;
+        showCheckpointScreen("You reached the final checkpoint!");
+        movePlayer("ArrowRight", 0, false);
       }
     }
   });
