@@ -77,6 +77,8 @@ class CheckPoint {
       x,
       y,
     };
+    this.width = proportionalSize(40);
+    this.height = proportionalSize(70);
   }
 }
 
