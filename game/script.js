@@ -210,6 +210,7 @@ const animate = () => {
     ];
 
     if (checkpointDetectionRules.every((rule) => rule)) {
+      checkpoint.claim();
     }
   });
 };
