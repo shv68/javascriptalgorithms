@@ -71,7 +71,9 @@ class Platform {
   }
 }
 
-class CheckPoint {}
+class CheckPoint {
+  constructor(x, y, z) {}
+}
 
 const player = new Player();
 
