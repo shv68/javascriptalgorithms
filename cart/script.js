@@ -138,6 +138,8 @@ class ShoppingCart {
     return this.items.length;
   }
 
+  calculateTaxes(amount) {}
+
   calculateTotal() {
     const subTotal = this.items.reduce((total, item) => total + item.price, 0);
   }
