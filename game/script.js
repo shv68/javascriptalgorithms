@@ -87,11 +87,15 @@ const platformPositions = [
   { x: 4400, y: proportionalSize(200) },
   { x: 4700, y: proportionalSize(150) },
 ];
-const platforms = platformPositions.map();
+
+const platforms = platformPositions.map(
+  (platform) => new Platform(platform.x, platform.y)
+);
 
 const animate = () => {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   player.update();
 
   if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
